@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text Operations</title>
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6e7f9b, #8399b5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      color: #4f6367;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 90%;
+      height: 150px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      resize: none;
+      margin-bottom: 20px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #6e7f9b;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Text Operation</h1>
+        <input id="inputText" placeholder="Enter text here..." />
+
+        <div class="buttons">
+            <button onclick="handleOperation('uppercase')">UPPERCASE</button>
+            <button onclick="handleOperation('lowercase')">lowercase</button>
+            <button onclick="handleOperation('wcount')">Word Count</button>
+            <button onclick="handleOperation('ccount')">Character Count</button>
+        </div>
+    </div>
+</body>
+</html>
