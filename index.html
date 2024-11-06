@@ -74,6 +74,22 @@
       transform: scale(1.05);
     }
 
+    .result {
+      background-color: #f4f7f6;
+      padding: 15px;
+      border-radius: 10px;
+      min-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .result p {
+      font-size: 16px;
+      color: #333;
+      word-wrap: break-word;
+    }
+
 </style>
 <body>
     <div class="container">
@@ -95,5 +111,28 @@
             <button onclick="handleOperation('clear')">Clear</button>
         </div>
     </div>
+
+    <script>
+         function handleOperation(op) {
+      const input = document.getElementById('inputText').value;
+      const output = document.getElementById('outputText');
+
+      if (op === "uppercase") {
+        output.value = input.toUpperCase();
+      } else if (op === "lowercase") {
+        output.value = input.toLowerCase();
+      } else if (op === "wcount") {
+        const wordCount = input.split(" ").length;
+        output.value = `Word Count: ${wordCount}`;
+      } else if (op === "ccount") {
+        const charCount = input.length;
+        output.value = `Character Count: ${charCount}`;
+      }
+      else {
+        document.getElementById('inputText').value = "";
+        output.value = "";
+      }
+    }
+    </script>
 </body>
 </html>
